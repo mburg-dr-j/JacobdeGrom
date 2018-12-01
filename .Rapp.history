@@ -1,0 +1,40 @@
+setwd()
+setwd('./Documents/R Practice/Jacob deGrom/')#
+season2014 <- read.csv('2014.csv')#
+season2015 <- read.csv('2015.csv')#
+season2016 <- read.csv('2016.csv')#
+season2017 <- read.csv('2017.csv')#
+season2018 <- read.csv('2018.csv')#
+tot14 <- length(season2014["ER"][season2014["Pit"] >= 60])#
+tot15 <- length(season2015["ER"][season2015["Pit"] >= 60])#
+tot16 <- length(season2016["ER"][season2016["Pit"] >= 60])#
+tot17 <- length(season2017["ER"][season2017["Pit"] >= 60])#
+tot18 <- length(season2018["ER"][season2018["Pit"] >= 60])#
+total <- tot14 + tot15 + tot16 + tot18 + tot18#
+onerun2014 <- length(season2014["ER"][season2014["Pit"] >= 60 & season2014["ER"] <= 1])#
+onerun2015 <- length(season2015["ER"][season2015["Pit"] >= 60 & season2015["ER"] <= 1])#
+onerun2016 <- length(season2016["ER"][season2016["Pit"] >= 60 & season2016["ER"] <= 1])#
+onerun2017 <- length(season2017["ER"][season2017["Pit"] >= 60 & season2017["ER"] <= 1])#
+onerun2018 <- length(season2018["ER"][season2018["Pit"] >= 60 & season2018["ER"] <= 1])#
+onerun <- onerun2014 + onerun2015 + onerun2016 + onerun2017 + onerun2018#
+onerun / total#
+onerun#
+total#
+onerun2014 / tot14#
+onerun2015 / tot15#
+onerun2016 / tot16#
+onerun2017 / tot17#
+onerun2018 / tot18
+x <- season2018["ER"][[1]]
+x
+x <- season2018["ER"][season2018["Pit
+"] >= 60]
+x <- season2018["ER"][season2018["Pit"] >= 60]
+x
+typeof(x)
+x <- season2018["ER"][[1]]
+x
+typeof(x)
+x <- season2018["ER"]
+typeof(x)
+args(mean)
