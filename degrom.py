@@ -5,6 +5,9 @@ import pandas
 # maybe it should.
 minPit = 60
 
+# I will call it a High Quality Start if the pitcher throws at least 60 pitches
+# and allows 1 or 0 earned runs.
+
 # Read in 2014 data
 frame2014 = pandas.read_csv('2014.csv')
 short2014 = pandas.concat([ frame2014['ER'], frame2014['Pit'], frame2014['Inngs'] ], axis=1)
@@ -45,8 +48,37 @@ short2018['RealS'] = short2018['Pit'] > minPit
 # Calculate 2018 High Quality Starts
 short2018['HQS'] = (short2018['ER'] < 2) & (short2018['RealS'])
 
+# Concatenate all seasons to get career totals
 shortAll = pandas.concat([short2014, short2015, short2016, short2017, short2018], ignore_index=True)
 
-hqs = len(shortAll['HQS'].nonzero()[0])
-all = len(shortAll['RealS'].nonzero()[0])
-print('High Quality Starts:', hqs, "out of", all, "or", round(hqs * 100 / all), "%" )
+print ("I am defining High Quality Start as throwing at least", minPit, "pitches, and allowing 1 or 0 earned runs.")
+
+# Compute ratio of High Quality Starts for 2014
+hqs2014 = len(short2014['HQS'].nonzero()[0])
+all2014 = len(short2014['RealS'].nonzero()[0])
+print('High Quality Starts, 2014:', hqs2014, "out of", all2014, "or", round(hqs2014 * 100 / all2014), "%" )
+
+# Compute ratio of High Quality Starts for 2015
+hqs2015 = len(short2015['HQS'].nonzero()[0])
+all2015 = len(short2015['RealS'].nonzero()[0])
+print('High Quality Starts, 2015:', hqs2015, "out of", all2015, "or", round(hqs2015 * 100 / all2015), "%" )
+
+# Compute ratio of High Quality Starts for 2016
+hqs2016 = len(short2016['HQS'].nonzero()[0])
+all2016 = len(short2016['RealS'].nonzero()[0])
+print('High Quality Starts, 2016:', hqs2016, "out of", all2016, "or", round(hqs2016 * 100 / all2016), "%" )
+
+# Compute ratio of High Quality Starts for 2017
+hqs2017 = len(short2017['HQS'].nonzero()[0])
+all2017 = len(short2017['RealS'].nonzero()[0])
+print('High Quality Starts, 2017:', hqs2017, "out of", all2017, "or", round(hqs2017 * 100 / all2017), "%" )
+
+# Compute ratio of High Quality Starts for 2018
+hqs2018 = len(short2018['HQS'].nonzero()[0])
+all2018 = len(short2018['RealS'].nonzero()[0])
+print('High Quality Starts, 2018:', hqs2018, "out of", all2018, "or", round(hqs2018 * 100 / all2018), "%" )
+
+# Compute ratio of High Quality Starts for Career
+hqsAll = len(shortAll['HQS'].nonzero()[0])
+allAll = len(shortAll['RealS'].nonzero()[0])
+print('High Quality Starts, Career:', hqsAll, "out of", allAll, "or", round(hqsAll * 100 / allAll), "%" )
