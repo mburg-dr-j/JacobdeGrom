@@ -1,3 +1,4 @@
+# Tested in Python 3.7.0, pandas 0.23.4
 import pandas
 
 # I am assuming you've gotta throw a minimum number of pitches before calling it
