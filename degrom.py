@@ -5,8 +5,8 @@ import pandas
 # maybe it should.
 minPit = 60
 
-# I will call it a High Quality Start if the pitcher throws at least 60 pitches
-# and allows 1 or 0 earned runs.
+# I will call it a High Quality Start if the pitcher throws a minimum number
+# of pitches and allows 1 or 0 earned runs.
 
 # Read in 2014 data
 frame2014 = pandas.read_csv('2014.csv')
